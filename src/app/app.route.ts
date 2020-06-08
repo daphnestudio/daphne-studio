@@ -15,6 +15,10 @@ export const routes: Routes = [
     path: 'services',
     loadChildren: 'src/app/view/services/services.module#ServicesModule',
   },
+  {
+    path: 'services/face',
+    loadChildren: 'src/app/view/face/face.module#FaceModule',
+  },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
