@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light white-navbar fixed-top">
+<nav *ngIf="isOnMobile" class="navbar navbar-expand-lg navbar-light bg-light white-navbar fixed-top">
     <a class="navbar-brand" data-toggle="collapse" routerLink="home">DAPHNE-STUDIO</a>
     <!-- The Hambuerge menù on mobile -->
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,4 +30,19 @@
             </li>
         </ul>
     </div>
+</nav>
+
+<nav *ngIf="!isOnMobile" role="navigation" class="primary-navigation d-flex align-items-center justify-content-center">
+    <ul>
+        <li><a [ngClass]="{'activeUrl': isService}" routerLink="/servizi">SERVIZI</a>
+            <ul class="dropdown">
+                <li><a routerLink="/servizi/corpo">CORPO</a></li>
+                <li><a routerLink="/servizi/viso">VISO</a></li>
+                <li><a routerLink="/servizi/laser">LASER</a></li>
+            </ul>
+        </li>
+        <li><a [ngClass]="{'activeUrl': isFeedbacks}" routerLink="/dicono-di-noi">DICONO DI NOI</a></li>
+        <li><a [ngClass]="{'activeUrl': isWorkWithUs}" routerLink="/lavora-con-noi">LAVORA CON NOI</a></li>
+        <li><a [ngClass]="{'activeUrl': isContacts}" routerLink="/contatti">CONTATTI</a></li>
+    </ul>
 </nav>

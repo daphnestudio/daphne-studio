@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
-import { Event } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,27 +8,8 @@ import { Event } from '@angular/router';
 export class AppComponent {
   title = 'Daphne-Studio';
 
-  loading: boolean = true;
+    constructor() {
 
-    constructor(private router: Router) {
-        // router.events.subscribe((routerEvent: Event) => {
-        //     this.checkRouterEvent(routerEvent);
-        // });
-    }
-
-    checkRouterEvent(routerEvent: Event): void {
-        if (routerEvent instanceof NavigationStart) {
-            this.loading = true;
-        }
-        if (routerEvent instanceof NavigationEnd ||
-            routerEvent instanceof NavigationCancel ||
-            routerEvent instanceof NavigationError) {
-            this.loading = false;
-        }
-    }
-
-    onActivate(event) {
-        window.scroll(0,0);
     }
 }
 
