@@ -1,8 +1,15 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  HostListener,
+} from "@angular/core";
 import { BaseComponent } from "src/app/util/base-view";
 import { EventManagerService } from "src/app/service/base/event-manager.service";
 import { Router } from "@angular/router";
+import { DOCUMENT } from "@angular/platform-browser";
 declare var $;
+declare var window: any;
 
 @Component({
   selector: "daphne-navbar",
@@ -16,7 +23,7 @@ export class NavbarComponent extends BaseComponent<any> implements OnInit {
   isWorkWithUs: boolean = false;
   isContacts: boolean = false;
   isFeedbacks: boolean = false;
-
+  isScrolled: number = 0;
   constructor(router: Router, eventManager: EventManagerService) {
     super(eventManager);
     // TODO: che schifo, da cambiare assolutamente !!!
@@ -53,5 +60,15 @@ export class NavbarComponent extends BaseComponent<any> implements OnInit {
         navMain.collapse("hide");
       });
     });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    let navbar = document.querySelector('.primary-navigation');
+    if (window.pageYOffset > navbar.clientHeight) {
+      navbar.classList.add('scrolled-navbar');
+    } else {
+      navbar.classList.remove('scrolled-navbar');
+    }
   }
 }

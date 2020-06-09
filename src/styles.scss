@@ -3,32 +3,17 @@
 @import "../src/assets/base";
 // set font site
 @font-face {
-    font-family: "Lato-Regular";
-    src: url("~src/assets/font/Lato-Regular.ttf");
+    font-family: "Georgia-Regular";
+    src: url("~src/assets/font/Georgia-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Lato-Bold";
-    src: url("~src/assets/font/Lato-Bold.ttf");
-}
-
-@font-face {
-    font-family: "Lato-SemiBold";
-    src: url("~src/assets/font/Lato-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Lato-Thin";
-    src: url("~src/assets/font/Lato-Thin.ttf");
-}
-
-@font-face {
-    font-family: "Lato-Medium";
-    src: url("~src/assets/font/Lato-Medium.ttf");
+    font-family: "Georgia-Bold";
+    src: url("~src/assets/font/Georgia-Bold.ttf");
 }
 
 body {
-    background-color: 'red';
+    font-family: $regular;
 }
 
 // fonts-website
