@@ -11,7 +11,7 @@ export class FaceComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-        alert('face is loaded');
+        console.log('face is loaded');
     }, 5000);
   }
 }

@@ -1,20 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~src/assets/base";
+@import "../src/assets/base";
 // set font site
 @font-face {
-    font-family: "Raleway-Regular";
-    //src: url("./assets/font/Raleway-Regular.ttf")
+    font-family: "Lato-Regular";
+    src: url("~src/assets/font/Lato-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Raleway-Bold";
-    //src: url("./assets/font/Raleway-Bold.ttf")
+    font-family: "Lato-Bold";
+    src: url("~src/assets/font/Lato-Bold.ttf");
 }
 
 @font-face {
-    font-family: "Raleway-SemiBold";
-    //src: url("./assets/font/Sanchez-Regular.ttf")
+    font-family: "Lato-SemiBold";
+    src: url("~src/assets/font/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Lato-Thin";
+    src: url("~src/assets/font/Lato-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: url("~src/assets/font/Lato-Medium.ttf");
+}
+
+body {
+    background-color: 'red';
 }
 
 // fonts-website
@@ -48,3 +62,45 @@
 .pre-wrap {
     white-space: pre-wrap;
 }
+
+
+/**** FIVE BLOCKS IN 12 COL BOOTSTRAP****/
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+/****FINISH FIVE BLOCKS****/

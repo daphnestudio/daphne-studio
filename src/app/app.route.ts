@@ -12,11 +12,11 @@ export const routes: Routes = [
     loadChildren: 'src/app/view/home/home.module#HomeModule',
   },
   {
-    path: 'services',
+    path: 'servizi',
     loadChildren: 'src/app/view/services/services.module#ServicesModule',
   },
   {
-    path: 'services/face',
+    path: 'servizi/viso',
     loadChildren: 'src/app/view/face/face.module#FaceModule',
   },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
