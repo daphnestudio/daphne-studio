@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { BaseComponent } from 'src/app/util/base-view';
+import { EventManagerService } from 'src/app/service/base/event-manager.service';
 declare var $;
 
 @Component({
@@ -7,9 +9,10 @@ declare var $;
   styleUrls: ['./navbar.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent extends BaseComponent<any> implements OnInit {
 
-  constructor() {
+  constructor(eventManager: EventManagerService) {
+    super(eventManager);
   }
 
   ngOnInit() {

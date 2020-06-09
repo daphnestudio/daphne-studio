@@ -4,5 +4,7 @@
     <!-- <div *ngIf="loading">
         <daphne-loader></daphne-loader>
     </div> -->
-    <router-outlet></router-outlet>
+    <div style="margin-top: 65px;">
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </div>
 </div>

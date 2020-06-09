@@ -1,3 +1,90 @@
-<p>
-  body works!
-</p>
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-12 w-100">
+            <img class="w-100" src="{{mainBodyImage}}" alt="Immagine principale">
+        </div>
+    </div>
+    <div class="row no-gutters discover-treatment d-flex align-items-center">
+        <div *ngIf="!isOnMobile" class="col-2"></div>
+        <div [ngClass]="{'col-8': isOnMobile, 'col-6': !isOnMobile}" class="pt-2 pb-2">
+            <span [ngClass]="{'discover-treatment-text-mobile': isOnMobile}" class="discover-treatment-text">
+                SCOPRI IL TRATTAMENTO PIÚ ADATTO A TE
+            </span>
+        </div>
+        <div [ngClass]="{'col-4': isOnMobile, 'col-2': !isOnMobile}" class="pt-2 pb-2">
+            <button class="do-test-button" type="button">Fai il test</button>
+        </div>
+        <div *ngIf="!isOnMobile" class="col-2"></div>
+    </div>
+    <!-- FIRST SECTION -->
+    <div class="row no-gutters">
+        <div *ngIf="!isOnMobile" class="col-1"></div>
+        <div class="pt-4 pb-4 d-flex align-items-center" [ngClass]="{'col-12 pr-2 pl-2': isOnMobile, 'col-4 pr-5': !isOnMobile}">
+            <div>
+                <h3 class="section-title">
+                    Slim-Laser
+                </h3>
+                <span class="section-desc">
+              Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. 
+                </span>
+                <br>
+                <button class="book-now mt-3" type="button">Prenota ora</button>
+            </div>
+        </div>
+        <div [ngClass]="{'col-12': isOnMobile, 'col-7': !isOnMobile}">
+            <img class="section-image" src="{{mainBodyImage}}" alt="Immagine prima sezione">
+        </div>
+    </div>
+
+    <!-- SECOND SECTION -->
+    <div class="row no-gutters">
+        <div [ngClass]="{'col-12 order-2': isOnMobile, 'col-7': !isOnMobile}">
+            <img class="section-image" src="{{mainBodyImage}}" alt="Immagine prima sezione">
+        </div>
+        <div *ngIf="!isOnMobile" class="col-1"></div>
+        <div class="pt-4 pb-4 d-flex align-items-center" [ngClass]="{'col-12 pr-2 pl-2': isOnMobile, 'col-4 pr-5': !isOnMobile}">
+            <div>
+                <h3 class="section-title">
+                    Radiofrequenza
+                </h3>
+                <span class="section-desc">
+                Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. 
+              </span>
+                <br>
+                <button class="book-now mt-3" type="button">Prenota ora</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- THIRD SECTION -->
+    <div class="row no-gutters">
+        <div *ngIf="!isOnMobile" class="col-1"></div>
+        <div class="pt-4 pb-4 d-flex align-items-center" [ngClass]="{'col-12 pr-2 pl-2': isOnMobile, 'col-4 pr-5': !isOnMobile}">
+            <div>
+                <h3 class="section-title">
+                    Massaggio linfodrenante, meccanico
+                </h3>
+                <span class="section-desc">
+                Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. 
+              </span>
+                <br>
+                <button class="book-now mt-3" type="button">Prenota ora</button>
+            </div>
+        </div>
+        <div [ngClass]="{'col-12': isOnMobile, 'col-7': !isOnMobile}">
+            <img class="section-image" src="{{mainBodyImage}}" alt="Immagine prima sezione">
+        </div>
+    </div>
+
+    <!-- TAKE CARE OF YOU -->
+    <div class="row no-gutters discover-treatment d-flex justify-content-center">
+        <div class="col-6 pt-5 pb-5">
+            <span [ngClass]="{'discover-treatment-text-mobile': isOnMobile}" class="discover-treatment-text">
+                PRENDIITI CURA DI TE
+            </span>
+        </div>
+        <div class="col-6 pt-5 pb-5">
+            <button class="do-test-button" type="button">PRENOTA ORA</button>
+        </div>
+    </div>
+</div>

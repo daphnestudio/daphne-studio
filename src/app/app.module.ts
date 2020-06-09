@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {APP_ROUTES} from './app.route';
 import { NavbarModule } from './control/navbar/navbar.module';
 import { LoaderModule } from './control/loader/loader.module';
+import { EventManagerService } from './service/base/event-manager.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { LoaderModule } from './control/loader/loader.module';
     NavbarModule,
     // LoaderModule,
   ],
-  providers: [],
+    providers: [EventManagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

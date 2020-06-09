@@ -28,5 +28,9 @@ export class AppComponent {
             this.loading = false;
         }
     }
+
+    onActivate(event) {
+        window.scroll(0,0);
+    }
 }
 
