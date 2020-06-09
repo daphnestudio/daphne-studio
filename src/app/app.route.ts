@@ -19,6 +19,14 @@ export const routes: Routes = [
     path: 'servizi/viso',
     loadChildren: 'src/app/view/face/face.module#FaceModule',
   },
+  {
+    path: 'servizi/corpo',
+    loadChildren: 'src/app/view/body/body.module#BodyModule',
+  },
+  {
+    path: 'servizi/laser',
+    loadChildren: 'src/app/view/laser/laser.module#LaserModule',
+  },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
