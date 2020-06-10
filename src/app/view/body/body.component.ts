@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { BaseComponent } from "src/app/util/base-view";
 import { EventManagerService } from "src/app/service/base/event-manager.service";
 import { FormGroup, FormBuilder, Validators, FormControl } from "@angular/forms";
+import * as moment from 'moment';
 
 @Component({
 	selector: "daphne-body",
@@ -35,8 +36,9 @@ export class BodyComponent extends BaseComponent<any> implements OnInit {
 	}
 
 	sendFormData() {
-		this.whatsappMessage = `Nome: *${this.bodyformGroup.value.name}* Cognome: *${this.bodyformGroup.value.surname}* Data di nascita: *${this.bodyformGroup.value.birthDate}*. E-mail: *${this.bodyformGroup.value.email}*`;
-		let url = `https://wa.me/00393275360115/?text=${this.whatsappMessage}`;
+		const { name, surname, birthDate, email } = this.bodyformGroup.value;
+		this.whatsappMessage = `Nome: *${name}* Cognome: *${surname}* Data di nascita: *${moment(new Date(birthDate).toISOString()).format('DD/MM/YYYY')}*. E-mail: *${email}*`;
+		let url = `https://wa.me/+393275360115/?text=${this.whatsappMessage}`;
 		window.open(url, "_blank");
 	}
 }

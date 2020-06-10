@@ -128,7 +128,7 @@
                         Data di nascita *
                     </label>
                     <div [ngClass]="{'col-8': isOnMobile, 'col-9': !isOnMobile}">
-                        <input type="text" formControlName="birthDate" class="form-control" id="inputPassword" placeholder="Data di nascita" [class.is-invalid]="bodyformGroup.get('birthDate').invalid && bodyformGroup.get('birthDate').touched">
+                        <input type="text" formControlName="birthDate" placeholder="gg/mm/aaaa" class="form-control" bsDatepicker [bsConfig]="{isAnimated: true, dateInputFormat: 'DD/MM/YYYY', containerClass:' theme-red'}" [class.is-invalid]="bodyformGroup.get('birthDate').invalid && bodyformGroup.get('birthDate').touched">
                     </div>
                 </div>
                 <div class="form-group row">
