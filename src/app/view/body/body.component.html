@@ -25,10 +25,12 @@
                     Slim-Laser
                 </h3>
                 <span class="section-desc">
-              Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. 
+                    Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem
+                    Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo
+                    tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.
                 </span>
                 <br>
-                <button class="book-now mt-3" type="button">Prenota ora</button>
+                <button class="generic-pink-button mt-3" type="button">Prenota ora</button>
             </div>
         </div>
         <div [ngClass]="{'col-12': isOnMobile, 'col-7': !isOnMobile}">
@@ -48,10 +50,12 @@
                     Radiofrequenza
                 </h3>
                 <span class="section-desc">
-                Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. 
-              </span>
+                    Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem
+                    Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo
+                    tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.
+                </span>
                 <br>
-                <button class="book-now mt-3" type="button">Prenota ora</button>
+                <button class="generic-pink-button mt-3" type="button">Prenota ora</button>
             </div>
         </div>
     </div>
@@ -65,10 +69,12 @@
                     Massaggio linfodrenante, meccanico
                 </h3>
                 <span class="section-desc">
-                Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. 
-              </span>
+                    Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem
+                    Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo
+                    tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.
+                </span>
                 <br>
-                <button class="book-now mt-3" type="button">Prenota ora</button>
+                <button class="generic-pink-button mt-3" type="button">Prenota ora</button>
             </div>
         </div>
         <div [ngClass]="{'col-12': isOnMobile, 'col-7': !isOnMobile}">
@@ -85,6 +91,61 @@
         </div>
         <div class="col-6 pt-5 pb-5 d-flex align-items-center justify-content-center">
             <button class="do-test-button" type="button">PRENOTA ORA</button>
+        </div>
+    </div>
+
+    <!-- CONTACT ME FORM -->
+    <div class="row no-gutters mt-5">
+        <div class="col-12">
+            <h3>Voglio essere contattata
+            </h3>
+        </div>
+    </div>
+
+    <div class="row no-gutters mt-4">
+        <div *ngIf="!isOnMobile" class="col-3">
+        </div>
+        <div [ngClass]="{'col-10 offset-1': isOnMobile, 'col-6': !isOnMobile}">
+            <form [formGroup]='bodyformGroup'>
+                <div class="form-group row">
+                    <label [ngClass]="{'col-4': isOnMobile, 'col-3': !isOnMobile}" for="inputPassword" class="col-form-label d-flex justify-content-start">
+                        Nome *
+                    </label>
+                    <div [ngClass]="{'col-8': isOnMobile, 'col-9': !isOnMobile}">
+                        <input type="text" formControlName="name" class="form-control" id="inputPassword" placeholder="Nome" [class.is-invalid]="bodyformGroup.get('name').invalid && bodyformGroup.get('name').touched">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label [ngClass]="{'col-4': isOnMobile, 'col-3': !isOnMobile}" for="inputPassword" class="col-form-label d-flex justify-content-start">
+                        Cognome *
+                    </label>
+                    <div [ngClass]="{'col-8': isOnMobile, 'col-9': !isOnMobile}">
+                        <input type="text" formControlName="surname" class="form-control" id="inputPassword" placeholder="Cognome" [class.is-invalid]="bodyformGroup.get('surname').invalid && bodyformGroup.get('surname').touched">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label [ngClass]="{'col-4': isOnMobile, 'col-3': !isOnMobile}" for="inputPassword" class="col-form-label d-flex justify-content-start">
+                        Data di nascita *
+                    </label>
+                    <div [ngClass]="{'col-8': isOnMobile, 'col-9': !isOnMobile}">
+                        <input type="text" formControlName="birthDate" class="form-control" id="inputPassword" placeholder="Data di nascita" [class.is-invalid]="bodyformGroup.get('birthDate').invalid && bodyformGroup.get('birthDate').touched">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label [ngClass]="{'col-4': isOnMobile, 'col-3': !isOnMobile}" for="inputPassword" class="col-form-label d-flex justify-content-start">
+                        E-mail *
+                    </label>
+                    <div [ngClass]="{'col-8': isOnMobile, 'col-9': !isOnMobile}">
+                        <input type="email" formControlName="email" class="form-control" id="inputPassword" placeholder="E-mail" [class.is-invalid]="bodyformGroup.get('email').invalid && bodyformGroup.get('email').touched">
+                    </div>
+                </div>
+                <div [ngClass]="{'justify-content-center': isOnMobile, 'justify-content-end': !isOnMobile}" class="d-flex">
+                    <button [ngClass]="{'generic-pink-button-disabled not-allowed': bodyformGroup.status === 'INVALID', 'generic-pink-button': bodyformGroup.status === 'VALID'}" [disabled]="bodyformGroup.status === 'INVALID'" (click)="sendFormData()" [style.min-width]="isOnMobile ? '100%' : '50px'"
+                        class="mt-3" type="button">Invia</button>
+                </div>
+            </form>
+        </div>
+        <div *ngIf="!isOnMobile" class="col-3">
         </div>
     </div>
 </div>

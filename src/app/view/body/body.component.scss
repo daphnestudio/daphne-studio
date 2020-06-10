@@ -52,10 +52,22 @@ button:focus {
     height: auto;
 }
 
-.book-now {
+.generic-pink-button {
     border: 0 transparent;
     background-color: $main-pink;
     color: #ffffff;
+    outline: none;
+    border-radius: 30px;
+    text-align: center;
+    padding: 5px 25px;
+    font-size: 1.09375em;
+    min-width: 50px;
+}
+
+.generic-pink-button-disabled {
+    border: 0 transparent;
+    background-color: #e3e3e3;
+    color: $text-color;
     outline: none;
     border-radius: 30px;
     text-align: center;
