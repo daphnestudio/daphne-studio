@@ -1,6 +1,6 @@
 <div align="center" class="app-component-container">
     <daphne-navbar></daphne-navbar>
-    <div class="main-content">
+    <div class="main-content" [style.margin-top.px]="isOnMobile ? 65 : 0">
         <router-outlet></router-outlet>
     </div>
     <daphne-footer></daphne-footer>

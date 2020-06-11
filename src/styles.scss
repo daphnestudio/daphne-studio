@@ -3,13 +3,33 @@
 @import "../src/assets/base";
 // set font site
 @font-face {
-    font-family: "Georgia-Regular";
-    src: url("~src/assets/font/Georgia-Regular.ttf");
+    font-family: "Raleway-Medium";
+    src: url("~src/assets/font/Raleway-Medium.ttf");
 }
 
 @font-face {
-    font-family: "Georgia-Bold";
-    src: url("~src/assets/font/Georgia-Bold.ttf");
+    font-family: "Raleway-Regular";
+    src: url("~src/assets/font/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("~src/assets/font/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Sanchez-Regular";
+    src: url("~src/assets/font/Sanchez-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-thin";
+    src: url("~src/assets/font/Raleway-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-SemiBold";
+    src: url("~src/assets/font/Raleway-SemiBold.ttf");
 }
 
 html,
@@ -30,6 +50,10 @@ input[type=number]:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
     box-shadow: inset 0 -1px 0 #ddd;
+}
+
+button {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .2);
 }
 
 // fonts-website
