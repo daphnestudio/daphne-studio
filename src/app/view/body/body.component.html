@@ -140,8 +140,7 @@
                     </div>
                 </div>
                 <div [ngClass]="{'justify-content-center': isOnMobile, 'justify-content-end': !isOnMobile}" class="d-flex">
-                    <button [ngClass]="{'generic-pink-button-disabled not-allowed': bodyformGroup.status === 'INVALID', 'generic-pink-button': bodyformGroup.status === 'VALID'}" [disabled]="bodyformGroup.status === 'INVALID'" (click)="sendFormData()" [style.min-width]="isOnMobile ? '100%' : '50px'"
-                        class="mt-3" type="button">Invia</button>
+                    <button (click)="sendFormData()" [style.min-width]="isOnMobile ? '100%' : '50px'" class=" generic-pink-button mt-3 mb-3" type="button">Invia</button>
                 </div>
             </form>
         </div>

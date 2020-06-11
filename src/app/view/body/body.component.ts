@@ -3,6 +3,7 @@ import { BaseComponent } from "src/app/util/base-view";
 import { EventManagerService } from "src/app/service/base/event-manager.service";
 import { FormGroup, FormBuilder, Validators, FormControl } from "@angular/forms";
 import * as moment from 'moment';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
 	selector: "daphne-body",
@@ -16,7 +17,10 @@ export class BodyComponent extends BaseComponent<any> implements OnInit {
 	bodyformGroup: FormGroup;
 	whatsappMessage: string = "";
 
-	constructor(eventManager: EventManagerService, private fb: FormBuilder) {
+	constructor(
+		eventManager: EventManagerService,
+		private fb: FormBuilder,
+		private toastr: ToastrService) {
 		super(eventManager);
 		this.createForm();
 	}
@@ -37,8 +41,24 @@ export class BodyComponent extends BaseComponent<any> implements OnInit {
 
 	sendFormData() {
 		const { name, surname, birthDate, email } = this.bodyformGroup.value;
-		this.whatsappMessage = `Nome: *${name}* Cognome: *${surname}* Data di nascita: *${moment(new Date(birthDate).toISOString()).format('DD/MM/YYYY')}*. E-mail: *${email}*`;
-		let url = `https://wa.me/+393275360115/?text=${this.whatsappMessage}`;
-		window.open(url, "_blank");
+		if (this.bodyformGroup.invalid) {
+			if (this.bodyformGroup.controls.email.invalid && (
+				this.bodyformGroup.controls.name.valid &&
+				this.bodyformGroup.controls.surname.valid &&
+				this.bodyformGroup.controls.birthDate.valid
+			)) {
+				this.toastr.error('La mail inserita non è valida', 'Error');
+				return;
+			}
+			this.toastr.error('Compila tutti i campi del form.', 'Error');
+			return;
+		} else {
+			this.toastr.success('La tua richiesta verrà presa in carico tra qualche secondo', 'Success');
+			setTimeout(() => {
+				this.whatsappMessage = `Nome: *${name}* Cognome: *${surname}* Data di nascita: *${moment(new Date(birthDate).toISOString()).format('DD/MM/YYYY')}*. E-mail: *${email}*`;
+				let url = `https://wa.me/+393275360115/?text=${this.whatsappMessage}`;
+				window.open(url, "_blank");
+			}, 4000);
+		}
 	}
 }
