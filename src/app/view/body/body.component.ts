@@ -50,13 +50,13 @@ export class BodyComponent extends BaseComponent<any> implements OnInit {
 				this.toastr.error('La mail inserita non è valida', 'Error');
 				return;
 			}
-			this.toastr.error('Compila tutti i campi del form.', 'Error');
+			this.toastr.error('Tutti i campi sono obbligatori', 'Error');
 			return;
 		} else {
 			this.toastr.success('La tua richiesta verrà presa in carico tra qualche secondo', 'Success');
 			setTimeout(() => {
 				this.whatsappMessage = `Nome: *${name}* Cognome: *${surname}* Data di nascita: *${moment(new Date(birthDate).toISOString()).format('DD/MM/YYYY')}*. E-mail: *${email}*`;
-				let url = `https://wa.me/+393275360115/?text=${this.whatsappMessage}`;
+				let url = `https://wa.me/00393275360115/?text=${this.whatsappMessage}`;
 				window.open(url, "_blank");
 			}, 4000);
 		}
