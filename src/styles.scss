@@ -5,33 +5,18 @@
 @import '~ngx-toastr/toastr';
 // set font site
 @font-face {
-    font-family: "Poppins-Regular";
-    src: url("~src/assets/font/Poppins-Regular.ttf");
+    font-family: "Source-Sans-Pro-Regular";
+    src: url("~src/assets/font/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Poppins-Medium";
-    src: url("~src/assets/font/Poppins-Medium.ttf");
+    font-family: "Source-Sans-Pro-Bold";
+    src: url("~src/assets/font/SourceSansPro-Bold.ttf");
 }
 
 @font-face {
-    font-family: "Poppins-Bold";
-    src: url("~src/assets/font/Poppins-Bold.ttf");
-}
-
-@font-face {
-    font-family: "Sanchez-Regular";
-    src: url("~src/assets/font/Sanchez-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Poppins-Thin";
-    src: url("~src/assets/font/Poppins-Thin.ttf");
-}
-
-@font-face {
-    font-family: "Poppins-Light";
-    src: url("~src/assets/font/Poppins-Light.ttf");
+    font-family: "Play-Fair-Display-Bold";
+    src: url("~src/assets/font/PlayfairDisplay-Bold.ttf");
 }
 
 html,
@@ -147,13 +132,13 @@ input[type=number]:focus,
 .font-text {
     font-size: $size-base;
     font-family: $regular;
-    color: $text-color;
+    color: $eerie-black;
 }
 
 .font-title {
     font-size: $size-title;
-    font-family: $regular-bold;
-    color: $text-color;
+    font-family: $title;
+    color: $eerie-black;
 }
 
 // Utils Classes
