@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BodyComponent } from './body.component';
 import { BODY_ROUTES } from './body-routing.module';
 import { BackendService } from 'src/app/service/backend-caller.service';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [BodyComponent],
@@ -11,7 +12,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CommonModule,
     BODY_ROUTES,
     ReactiveFormsModule,
-    FormsModule
+    BsDatepickerModule.forRoot(),
   ],
   providers: [BackendService]
 })

@@ -1,0 +1,9 @@
+@import "~src/styles";
+@import "~src/assets/base";
+daphne-home {
+    .carousel-item {
+        min-height: 65vh;
+        background-size: cover;
+        background-position: center center;
+    }
+}

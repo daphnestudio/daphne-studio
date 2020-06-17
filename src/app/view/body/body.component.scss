@@ -1,7 +1,7 @@
 @import "~src/styles";
 @import "~src/assets/base";
 .discover-treatment {
-    background-color: $main-pink;
+    background-color: $maximum-blue-purple;
 }
 
 .discover-treatment-text {
@@ -29,7 +29,7 @@
     border: 0 transparent;
     border-radius: 50px;
     background-color: #ffffff;
-    color: $text-color;
+    color: $eerie-black;
     font-size: $size-base;
     padding: 15px 35px;
     outline: none;
@@ -52,9 +52,9 @@ button:focus {
     height: auto;
 }
 
-.book-now {
+.generic-pink-button {
     border: 0 transparent;
-    background-color: $main-pink;
+    background-color: $maximum-blue-purple;
     color: #ffffff;
     outline: none;
     border-radius: 30px;
@@ -64,20 +64,14 @@ button:focus {
     min-width: 50px;
 }
 
-.contactMePls h2{
-font-size:$title-30;
+.generic-pink-button-disabled {
+    border: 0 transparent;
+    background-color: #e3e3e3;
+    color: $eerie-black;
+    outline: none;
+    border-radius: 30px;
+    text-align: center;
+    padding: 5px 25px;
+    font-size: 1.09375em;
+    min-width: 50px;
 }
-
-.form-group{
-background-color:white;
-}
-
-input {
-    background-color: #d1d1d1;
-  }
-
-
-  .myForm{
-    display:grid;
-    
-  }

@@ -1,20 +1,37 @@
 // Export this sheet to ALL style components sheet
 // set font here
-$regular: "Georgia-Regular";
-// $regular-semibold: "Raleway-SemiBold";
-$regular-bold: "Georgia-Bold";
+$regular: "Source-Sans-Pro-Regular";
+$title: "Play-Fair-Display-Bold";
+$regular-bold: "Source-Sans-Pro-Bold";
+$logo: "Goudy-Old-Style-Regular";
 // set base font
 $size-base: 1em; // 16px
-$size-medium: 1.125em;
-$size-title: 1.75em;
-$title-30: 1.875em;
-$size-small: 0.875em;
+$size-small: 0.875em; // 14px
+$size-medium: 1.125em; // 18px
+$size-20: 1.250em; // 20px
+$size-title: 1.75em; // 28px
+$title-30: 1.875em; // 30px
+$size-logo: 2.250em; // 36px
+$size-40: 3.000em; //40px
 // color
-// $maincolor: #4371C4;
-$main-pink: #f4d3e8;
-$text-color: #1D1D1D;
+$maximum-blue-purple: #baa7e8ff;
+$mint-green: #b4ffb2ff;
+$eerie-black: #272727ff;
+$cultured: #f5f7f7ff;
+$lightcolor: #f0f0f0;
+$darkborder: rgba(206, 206, 206, 0.795);
 // utility
 $padding-md: 0.5em;
 $padding-sm: 0.3em;
 $padding-lg: 1.2em;
 $box-shadow: 3px 2px 47px -10px rgba(0, 0, 0, 0.10);
+// Some gradient
+$gradient-top: linear-gradient(0deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-right: linear-gradient(90deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-bottom: linear-gradient(180deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-left: linear-gradient(270deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-top-right: linear-gradient(45deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-bottom-right: linear-gradient(135deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-top-left: linear-gradient(225deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-bottom-left: linear-gradient(315deg, #baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);
+$gradient-radial: radial-gradient(#baa7e8ff, #b4ffb2ff, #272727ff, #f5f7f7ff);

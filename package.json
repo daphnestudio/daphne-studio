@@ -25,9 +25,11 @@
         "bootstrap": "^4.3.1",
         "core-js": "^2.5.4",
         "jquery": "^3.5.1",
+        "moment": "^2.26.0",
         "ng-lottie": "^0.3.2",
         "ngx-bootstrap": "^4.2.0",
         "ngx-logger": "^3.3.11",
+        "ngx-toastr": "^9.1.1",
         "rxjs": "^6.3.3",
         "tslib": "^1.9.0",
         "zone.js": "~0.8.26"
