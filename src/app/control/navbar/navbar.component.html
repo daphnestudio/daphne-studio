@@ -26,19 +26,29 @@
         </nav>
     </nav>
 </section>
-<nav *ngIf="!isOnMobile" role="navigation" class="primary-navigation d-flex align-items-center justify-content-end" (scroll)="onWindowScroll($event);">
-    <a routerLink='/home' class="logo">DAPHNE</a>
-    <ul class="justify-content-end">
-        <li><a [ngClass]="{'activeUrl': currentUrl.isService}" routerLink="/servizi">trattamenti</a>
-            <ul class="dropdown">
-                <li><a routerLink="/servizi/corpo">corpo</a></li>
-                <li><a routerLink="/servizi/viso">viso</a></li>
-                <li><a routerLink="/servizi/laser">laser</a></li>
-            </ul>
-        </li>
-        <li><a [ngClass]="{'activeUrl': currentUrl.isFeedbacks}" routerLink="/dicono-di-noi">dicono di
-                noi</a>
-        </li>
-        <li><a [ngClass]="{'activeUrl': currentUrl.isContacts}" routerLink="/contatti">contatti</a></li>
-    </ul>
-</nav>
+<div *ngIf="!isOnMobile" id="navbar-container" class="container-fluid p-0 main-navbar-container">
+    <div class="container">
+        <div class="row no-gutters w-100">
+            <div class="col-12">
+                <nav role="navigation" class="primary-navigation d-flex align-items-center justify-content-end" (scroll)="onWindowScroll($event);">
+                    <a routerLink='/home' class="logo">DAPHNE</a>
+                    <ul class="justify-content-end">
+                        <li><a [ngClass]="{'activeUrl': currentUrl.isService}" routerLink="/servizi">trattamenti</a>
+                            <ul class="dropdown">
+                                <li><a routerLink="/servizi/corpo">corpo</a></li>
+                                <li><a routerLink="/servizi/viso">viso</a></li>
+                                <li><a routerLink="/servizi/laser">laser</a></li>
+                            </ul>
+                        </li>
+                        <li><a [ngClass]="{'activeUrl': currentUrl.isFeedbacks}" routerLink="/dicono-di-noi">dicono di
+                                noi</a>
+                        </li>
+                        <li><a [ngClass]="{'activeUrl': currentUrl.isContacts}" routerLink="/contatti">contatti</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,40 @@
+@import "~src/styles";
+@import "~src/assets/base";
+daphne-main-card {
+    a {
+        color: inherit;
+    }
+    .card-height {
+        height: 50vh;
+    }
+    .card-image {
+        background-image: url('https://source.unsplash.com/collection/123');
+        background-size: cover;
+        background-position: center center;
+        height: 50vh;
+        margin-top: 10vh;
+        border: 12px solid white;
+        z-index: 2;
+    }
+    .text-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+    }
+    .title {
+        font-family: $title;
+        font-size: $size-40;
+    }
+    .description {
+        font-family: $regular;
+        font-size: $size-20;
+    }
+    .discover-link {
+        font-family: $title;
+        font-size: $size-20;
+        color: $maximum-blue-purple;
+        width: fit-content;
+    }
+}

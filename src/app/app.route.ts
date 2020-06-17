@@ -1,5 +1,5 @@
-import {ModuleWithProviders} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -45,5 +45,6 @@ export const routes: Routes = [
 export const APP_ROUTES: ModuleWithProviders = RouterModule.forRoot(routes, {
   useHash: false,
   enableTracing: false,
-  onSameUrlNavigation: 'reload'
+  onSameUrlNavigation: 'reload',
+  scrollPositionRestoration: 'enabled'
 });

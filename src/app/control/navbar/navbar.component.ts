@@ -44,7 +44,7 @@ export class NavbarComponent extends BaseComponent<any> implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
-    let navbar = document.querySelector('.primary-navigation');
+    let navbar = document.querySelector('.main-navbar-container');
     if (!this.isOnMobile) {
       if (window.pageYOffset > navbar.clientHeight) {
         navbar.classList.add('scrolled-navbar');
