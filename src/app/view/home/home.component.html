@@ -1,12 +1,29 @@
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <img src="../assets/images/main.jpeg">
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-12">
+            <div id="carouselHome" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselHome" data-slide-to="1"></li>
+                    <li data-target="#carouselHome" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/random');">
+                    </div>
+                    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/collection/190727');">
+                    </div>
+                    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/collection/1');">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6">
-            <a routerLink='/servizi'>go to services</a>
-            <a href="https://wa.me/393275360115/?text=Questo testo può essere cambiato. PS: sei un pollo">Contatta Kretjan</a>
-            <a routerLink="/servizi/viso">VAI ALLA TUA FACCIA</a>
-        </div>
+    </div>
+</div>
+<div class="container-fluid p-0">
+    <div class="pt-3 pr-3">
+        <daphne-main-card [styles]='cardStylesObj' [isMintCard]=true></daphne-main-card>
+    </div>
+    <div class="pt-3 pl-3" style="margin-top: 15vh;">
+        <daphne-main-card [styles]='cardStylesObj' [isMintCard]=false [goTo]='servizi'></daphne-main-card>
     </div>
 </div>

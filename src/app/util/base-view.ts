@@ -1,7 +1,7 @@
-import {EventManagerService} from '../service/base/event-manager.service';
-import {EventParams} from './event-manager-media';
-import {Subject} from 'rxjs';
-import {HostListener, Input, OnDestroy, OnInit, TemplateRef} from '@angular/core';
+import { EventManagerService } from '../service/base/event-manager.service';
+import { EventParams } from './event-manager-media';
+import { Subject } from 'rxjs';
+import { HostListener, Input, OnDestroy, OnInit, TemplateRef } from '@angular/core';
 
 export const EVENT_NAME_LOADER_SHOW = 'loader_show';
 export const EVENT_NAME_LOADER_HIDE = 'loader_hide';
@@ -62,7 +62,7 @@ export class BaseComponent<T> implements OnDestroy, OnInit {
     const currentYear = new Date().getFullYear();
     const years: Array<any> = new Array<any>();
     for (let i = 0; i < 300; i++) {
-      years.push({id: currentYear - i, name: (currentYear - i)});
+      years.push({ id: currentYear - i, name: (currentYear - i) });
     }
     return years;
   }
@@ -121,7 +121,7 @@ export class BaseComponent<T> implements OnDestroy, OnInit {
   goAnimation() {
     const _self = this;
     this.ShowSuccesAnimation();
-    setTimeout(function() {
+    setTimeout(function () {
       _self.HideSuccesAnimation();
       _self.CloseModal();
     }, 2000);
@@ -282,6 +282,79 @@ export class BaseComponent<T> implements OnDestroy, OnInit {
       eventCategory: category,
       eventAction: action
     });
+  }
+
+  getCurrentUrl(url: string) {
+    let isService: boolean = false;
+    let isWorkWithUs: boolean = false;
+    let isContacts: boolean = false;
+    let isFeedbacks: boolean = false;
+    let isBody: boolean = false;
+    let isFace: boolean = false;
+    let isLaser: boolean = false;
+    if (url === "/servizi") {
+      isService = true;
+      isWorkWithUs = false;
+      isContacts = false;
+      isFeedbacks = false;
+      isBody = false;
+      isFace = false;
+      isLaser = false;
+    } else if (url === "/dicono-di-noi") {
+      isFeedbacks = true;
+      isService = false;
+      isWorkWithUs = false;
+      isContacts = false;
+      isBody = false;
+      isFace = false;
+      isLaser = false;
+    } else if (url === "/lavora-con-noi") {
+      isWorkWithUs = true;
+      isFeedbacks = false;
+      isService = false;
+      isContacts = false;
+    } else if (url === "/contatti") {
+      isContacts = true;
+      isFeedbacks = false;
+      isService = false;
+      isWorkWithUs = false;
+      isBody = false;
+      isFace = false;
+      isLaser = false;
+    } else if (url === "/servizi/corpo") {
+      isBody = true;
+      isService = true;
+      isWorkWithUs = false;
+      isContacts = false;
+      isFeedbacks = false;
+      isFace = false;
+      isLaser = false;
+    } else if (url === "/servizi/viso") {
+      isFace = true;
+      isService = true;
+      isWorkWithUs = false;
+      isContacts = false;
+      isFeedbacks = false;
+      isLaser = false;
+      isBody = false;
+    } else if (url === "/servizi/laser") {
+      isLaser = true;
+      isService = true;
+      isFace = false;
+      isWorkWithUs = false;
+      isContacts = false;
+      isFeedbacks = false;
+      isBody = false;
+    }
+    return {
+      isLaser,
+      isService,
+      isFace,
+      isWorkWithUs,
+      isContacts,
+      isFeedbacks,
+      isBody,
+    }
   }
 
 }

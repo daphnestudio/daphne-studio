@@ -1,37 +1,159 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../src/assets/base";
+// regular style toast 
+@import '~ngx-toastr/toastr';
 // set font site
 @font-face {
-    font-family: "Georgia-Regular";
-    src: url("~src/assets/font/Georgia-Regular.ttf");
+    font-family: "Source-Sans-Pro-Regular";
+    src: url("~src/assets/font/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Georgia-Bold";
-    src: url("~src/assets/font/Georgia-Bold.ttf");
+    font-family: "Source-Sans-Pro-Bold";
+    src: url("~src/assets/font/SourceSansPro-Bold.ttf");
 }
 
+@font-face {
+    font-family: "Play-Fair-Display-Bold";
+    src: url("~src/assets/font/PlayfairDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Goudy-Old-Style-Regular";
+    src: url("~src/assets/font/Goudy-Old-Style-Regular.ttf");
+}
+
+html,
 body {
+    height: 100%;
     font-family: $regular;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    box-shadow: inset 0 -1px 0 #ddd;
+}
+
+// button {
+//     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .2);
+// }
+.daphne-toast {
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 6px;
+    padding: 0.75rem 1.25rem 0.75rem 50px;
+    width: 300px;
+    background: no-repeat 15px center;
+    background-size: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+    pointer-events: auto;
+    .toast-title {
+        font-family: $regular-bold;
+        font-weight: bold;
+    }
+    .toast-message {
+        word-wrap: break-word;
+    }
+    .toast-message a:hover {
+        text-decoration: underline;
+    }
+    .toast-close-button {
+        position: relative;
+        right: -0.3em;
+        top: -0.3em;
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $regular-bold;
+        color: inherit;
+        text-shadow: 0 1px 0 #fff;
+        opacity: 0.5;
+        background: transparent;
+        border: 0;
+        padding: 0;
+    }
+    .toast-progress {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background-color: #000000;
+        opacity: 0.3;
+    }
+    .toast-close-button:hover,
+    .toast-close-button:focus {
+        color: #000000;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.75;
+    }
+}
+
+.toast:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.daphne-error {
+    background-image: url("~src/assets/images/toast_rosso.png"); // lasciare cosi perchè se no si sbraga l'icona
+    color: black;
+    background-color: $lightcolor;
+    cursor: pointer;
+    border: $darkborder;
+    box-shadow: 0px 3px 4px 2px rgba(255, 0, 0, 0.4);
+}
+
+.daphne-warning {
+    background-image: url("~src/assets/images/toast_arancio.png"); // lasciare cosi perchè se no si sbraga l'icona
+    color: black;
+    background-color: $lightcolor;
+    cursor: pointer;
+    border: $darkborder;
+    box-shadow: 0px 3px 4px 2px rgba(255, 134, 0, 0.5);
+}
+
+.daphne-success {
+    background-image: url("~src/assets/images/toast_verde.png"); // lasciare cosi perchè se no si sbraga l'icona
+    color: black;
+    background-color: $lightcolor;
+    cursor: pointer;
+    border: $darkborder;
+    box-shadow: 0px 3px 4px 2px rgba(0, 255, 19, 0.4);
 }
 
 // fonts-website
 .font-text {
     font-size: $size-base;
     font-family: $regular;
-    color: $text-color;
+    color: $eerie-black;
 }
 
 .font-title {
     font-size: $size-title;
-    font-family: $regular-bold;
-    color: $text-color;
+    font-family: $title;
+    color: $eerie-black;
 }
 
 // Utils Classes
 .pointer {
     cursor: pointer;
+}
+
+.not-allowed {
+    cursor: not-allowed;
 }
 
 .align-middle {

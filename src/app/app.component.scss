@@ -1,5 +1,18 @@
 @import "~src/styles";
 @import "~src/assets/base";
+.app-component-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes slide {
     0% {
         transform: translate(0px, 100px);
@@ -34,10 +47,4 @@
     100% {
         transform: translate(0px, 0px);
     }
-}
-
-.page {
-    animation-name: slide;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
 }
