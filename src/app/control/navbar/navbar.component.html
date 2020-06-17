@@ -10,36 +10,35 @@
         <h2 class="nav-title">Daphne - Studio</h2>
         <nav class="overlay-menu">
             <ul>
-                <li style='margin-bottom: 0px;'><a [ngClass]="{'activeUrl': currentUrl.isService}" class='section-title' routerLink="/servizi">SERVIZI</a>
+                <li style='margin-bottom: 0px;'><a [ngClass]="{'activeUrl': currentUrl.isService}" class='section-title' routerLink="/servizi">trattamenti</a>
                     <ul class="dropdown">
-                        <li class="sub-dropdown"><a [ngClass]="{'activeUrl': currentUrl.isBody}" routerLink="/servizi/corpo">CORPO</a></li>
-                        <li class="sub-dropdown"><a [ngClass]="{'activeUrl': currentUrl.isFace}" routerLink="/servizi/viso">VISO</a></li>
-                        <li class="sub-dropdown"><a [ngClass]="{'activeUrl': currentUrl.isLaser}" routerLink="/servizi/laser">LASER</a></li>
+                        <li class="sub-dropdown"><a [ngClass]="{'activeUrl': currentUrl.isBody}" routerLink="/servizi/corpo">corpo</a></li>
+                        <li class="sub-dropdown"><a [ngClass]="{'activeUrl': currentUrl.isFace}" routerLink="/servizi/viso">viso</a></li>
+                        <li class="sub-dropdown"><a [ngClass]="{'activeUrl': currentUrl.isLaser}" routerLink="/servizi/laser">laser</a></li>
                     </ul>
                 </li>
-                <li><a class='section-title' [ngClass]="{'activeUrl': currentUrl.isFeedbacks}" routerLink="/dicono-di-noi">DICONO
-                        DI NOI</a></li>
-                <li><a class='section-title' [ngClass]="{'activeUrl': currentUrl.isWorkWithUs}" routerLink="/lavora-con-noi">LAVORA
-                        CON NOI</a></li>
-                <li><a class='section-title' [ngClass]="{'activeUrl': currentUrl.isContacts}" routerLink="/contatti">CONTATTI</a>
+                <li><a class='section-title' [ngClass]="{'activeUrl': currentUrl.isFeedbacks}" routerLink="/dicono-di-noi">dicono
+                        di noi</a></li>
+                <li><a class='section-title' [ngClass]="{'activeUrl': currentUrl.isContacts}" routerLink="/contatti">contatti</a>
                 </li>
             </ul>
             <li class="close-menu" style="font-size:2em; color:#E00049; list-style-type: none;">&#10005;</li>
         </nav>
     </nav>
 </section>
-<nav *ngIf="!isOnMobile" role="navigation" class="primary-navigation d-flex align-items-center justify-content-center" (scroll)="onWindowScroll($event);">
-    <ul>
-        <li><a [ngClass]="{'activeUrl': currentUrl.isService}" routerLink="/servizi">SERVIZI</a>
+<nav *ngIf="!isOnMobile" role="navigation" class="primary-navigation d-flex align-items-center justify-content-end" (scroll)="onWindowScroll($event);">
+    <a routerLink='/home' class="logo">DAPHNE</a>
+    <ul class="justify-content-end">
+        <li><a [ngClass]="{'activeUrl': currentUrl.isService}" routerLink="/servizi">trattamenti</a>
             <ul class="dropdown">
-                <li><a routerLink="/servizi/corpo">CORPO</a></li>
-                <li><a routerLink="/servizi/viso">VISO</a></li>
-                <li><a routerLink="/servizi/laser">LASER</a></li>
+                <li><a routerLink="/servizi/corpo">corpo</a></li>
+                <li><a routerLink="/servizi/viso">viso</a></li>
+                <li><a routerLink="/servizi/laser">laser</a></li>
             </ul>
         </li>
-        <li><a [ngClass]="{'activeUrl': currentUrl.isFeedbacks}" routerLink="/dicono-di-noi">DICONO DI NOI</a></li>
-        <li><a [ngClass]="{'activeUrl': currentUrl.isWorkWithUs}" routerLink="/lavora-con-noi">LAVORA CON NOI</a>
+        <li><a [ngClass]="{'activeUrl': currentUrl.isFeedbacks}" routerLink="/dicono-di-noi">dicono di
+                noi</a>
         </li>
-        <li><a [ngClass]="{'activeUrl': currentUrl.isContacts}" routerLink="/contatti">CONTATTI</a></li>
+        <li><a [ngClass]="{'activeUrl': currentUrl.isContacts}" routerLink="/contatti">contatti</a></li>
     </ul>
 </nav>

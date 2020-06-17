@@ -19,6 +19,11 @@
     src: url("~src/assets/font/PlayfairDisplay-Bold.ttf");
 }
 
+@font-face {
+    font-family: "Goudy-Old-Style-Regular";
+    src: url("~src/assets/font/Goudy-Old-Style-Regular.ttf");
+}
+
 html,
 body {
     font-family: $regular;
