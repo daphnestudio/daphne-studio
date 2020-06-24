@@ -5,15 +5,15 @@ daphne-main-card {
         color: inherit;
     }
     .card-height {
-        height: 50vh;
+        height: 75vh;
     }
     .card-image {
         background-image: url('https://source.unsplash.com/collection/123');
         background-size: cover;
         background-position: center center;
-        height: 50vh;
+        height: 75vh;
         margin-top: 10vh;
-        border: 12px solid white;
+        border: 15px solid white;
         z-index: 2;
     }
     .text-box {
@@ -26,9 +26,10 @@ daphne-main-card {
     .title {
         font-family: $title;
         font-size: $size-40;
+        padding-bottom: 24px;
     }
     .description {
-        font-family: $regular;
+        font-family: $regular-light;
         font-size: $size-20;
     }
     .discover-link {
@@ -36,5 +37,11 @@ daphne-main-card {
         font-size: $size-20;
         color: $maximum-blue-purple;
         width: fit-content;
+        padding-top: 20px;
+        text-decoration: none;
+    }
+    .discover-link:hover {
+        text-decoration: none;
+        color: #7C57D4;
     }
 }

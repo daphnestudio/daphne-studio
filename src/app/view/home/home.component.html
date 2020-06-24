@@ -1,3 +1,4 @@
+<!-- PRESENTATIONAL CAROUSEL -->
 <div class="container-fluid p-0">
     <div class="row no-gutters">
         <div class="col-12">
@@ -8,22 +9,40 @@
                     <li data-target="#carouselHome" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/random');">
+                    <div class="carousel-item presentation-carousel-image active" style="background-image: url('https://source.unsplash.com/random');">
                     </div>
-                    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/collection/190727');">
+                    <div class="carousel-item presentation-carousel-image" style="background-image: url('https://source.unsplash.com/collection/190727');">
                     </div>
-                    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/collection/1');">
+                    <div class="carousel-item presentation-carousel-image" style="background-image: url('https://source.unsplash.com/collection/1');">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid p-0">
-    <div class="pt-3 pr-3">
+<!-- MAIN CONTENTS -->
+<div class="container-fluid p-0" style="overflow-x: hidden;">
+    <div class="pt-4 pr-4" data-aos="fade-left">
         <daphne-main-card [styles]='cardStylesObj' [isMintCard]=true></daphne-main-card>
     </div>
-    <div class="pt-3 pl-3" style="margin-top: 15vh;">
+    <div class="pt-4 pl-3 pb-4" style="margin-top: 15vh;margin-bottom: 100px;" data-aos="fade-right">
         <daphne-main-card [styles]='cardStylesObj' [isMintCard]=false [goTo]='servizi'></daphne-main-card>
+    </div>
+</div>
+<!-- FEEDBACKS CAROUSEL -->
+<div class="container-fluid p-0" data-aos="fade-up" data-aos-once="true">
+    <div class="row no-gutters pt-3">
+        <div class="col-12">
+            <div id="feedbackCarousel" class="carousel slide" data-ride="carousel" data-interval="4500">
+                <div class="carousel-inner">
+                    <div class="carousel-item feedback-carousel-image active" style="background-image: url('https://source.unsplash.com/collection/190727');">
+                    </div>
+                    <div class="carousel-item feedback-carousel-image" style="background-image: url('https://source.unsplash.com/collection/888');">
+                    </div>
+                    <div class="carousel-item feedback-carousel-image" style="background-image: url('https://source.unsplash.com/collection/190726');">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

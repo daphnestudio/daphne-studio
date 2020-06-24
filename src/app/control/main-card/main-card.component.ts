@@ -12,6 +12,7 @@ export class MainCardComponent extends BaseComponent<any> implements OnInit {
   @Input() styles: Object;
   @Input() isMintCard: boolean;
   @Input() goTo: string;
+  discoverLinkImgSrc = '../../../assets/images/arrow-right.png';
 
   constructor(eventManager: EventManagerService) {
     super(eventManager)
@@ -30,4 +31,13 @@ export class MainCardComponent extends BaseComponent<any> implements OnInit {
     return this.goTo === 'servizi' ? '/servizi' : '/servizi/corpo'
   }
 
+  getDiscoverArrowOnMouseOver() {
+    this.discoverLinkImgSrc = '../../../assets/images/arrow-right-hover.png';
+    return this.discoverLinkImgSrc;
+  }
+
+  getDiscoverArrowOnMouseOut() {
+    this.discoverLinkImgSrc = '../../../assets/images/arrow-right.png';
+    return this.discoverLinkImgSrc;
+  }
 }

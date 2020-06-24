@@ -8,19 +8,20 @@
                     of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
                 </p>
             </div>
-            <div class="col-3 offset-1 card-image">
+            <div class="col-4 offset-1 card-image">
             </div>
         </div>
         <div *ngIf="!isMintCard" class="row no-gutters card-height">
-            <div class="col-3 offset-1 card-image">
+            <div class="col-4 offset-1 card-image">
             </div>
             <div class="col-5 offset-1 text-box p-3">
                 <h4 class="title">Trattamenti</h4>
                 <p class="description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
                     of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
                 </p>
-                <a class="discover-link" [routerLink]="getNavigationUrl()">Scopri i nostri trattamenti
-                    <img class="ml-3" src="../../../assets/images/arrow-right.png" alt="Vai ai servizi"></a>
+                <a class="discover-link fa-road" [routerLink]="getNavigationUrl()" (mouseenter)="getDiscoverArrowOnMouseOver()" (mouseleave)="getDiscoverArrowOnMouseOut()">Scopri i
+                    nostri trattamenti
+                    <img class="ml-3" [src]="discoverLinkImgSrc" alt="Vai ai servizi"></a>
             </div>
         </div>
     </div>
